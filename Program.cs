@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DocumentFormat.OpenXml.Packaging;
 
 namespace ExcelTools
 {
-    class Program
+    public sealed class Program
     {
-        static void Main(string[] args)
+        private const string SampleExcelFile = "SampleData.xlsx";
+
+        public static void Main(string[] args)
         {
+            using (var document = SpreadsheetDocument.Open(SampleExcelFile, isEditable: true))
+            {
+            }
         }
     }
 }
